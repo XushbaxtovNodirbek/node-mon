@@ -4,11 +4,15 @@
   "description": "project mon",
   "main": "src/js/script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/js/script.js",
+    "dev": "nodemon src/js/script.js"
   },
   "keywords": [
     "http"
   ],
   "author": "Nodirbek Xushbaxtov",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
