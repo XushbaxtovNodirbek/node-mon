@@ -1,0 +1,14 @@
+{
+  "name": "node_mon",
+  "version": "1.0.0",
+  "description": "project mon",
+  "main": "src/js/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "http"
+  ],
+  "author": "Nodirbek Xushbaxtov",
+  "license": "ISC"
+}
