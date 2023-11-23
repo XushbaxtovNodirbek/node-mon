@@ -11,9 +11,9 @@ const server = http.createServer((req,res)=>{
     // res.end();
 
     if(req.method === 'GET'){
-        res.writeHead(200,{
-            "Content-Type":"text/html"
-        })
+        // res.writeHead(200,{
+        //     "Content-Type":"text/html"
+        // })
         if(req.url === '/'){
             fs.readFile(path.join(path.basename('./templates'),'main.html'),'utf-8',(err,content) => {
                 if(err) throw new Error(err)
@@ -26,13 +26,21 @@ const server = http.createServer((req,res)=>{
 
                 res.end(content)
             })
-        }
-        else if(req.url === '/contact'){
+        }else if(req.url === '/contact'){
             fs.readFile(path.join(path.basename('./templates'),'contact.html'),'utf-8',(err,content) => {
                 if(err) throw new Error(err)
 
                 res.end(content)
             })
+        }else if(req.url === '/api/admin'){
+            res.writeHead(200,{"Content-Type":"application/json"})
+            
+            const admin = {
+                    name:'Nodirbek',
+                    age:19,
+                    email:'nodirbek.devoloper@gmail.com'
+                }
+            res.end(JSON.stringify(admin))
         }
         // res.end(`
         //     <h2>Send Email</h2>   
